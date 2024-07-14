@@ -119,7 +119,7 @@ class _SearchOverlayState extends ShellOverlayState<SearchOverlay>
                   else if (results.isEmpty && _controller.text.isEmpty)
                     searchSuggestions(service)
                   else
-                    const SizedBox.shrink()
+                    const SizedBox.shrink(),
                 ],
               ),
             ),

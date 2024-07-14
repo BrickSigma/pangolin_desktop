@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import 'package:dahlia_shared/dahlia_shared.dart';
-import 'package:flutter/material.dart';
 import 'package:pangolin/components/overlays/quick_settings/quick_settings_overlay.dart';
 import 'package:pangolin/components/taskbar/taskbar_element.dart';
 import 'package:pangolin/services/date_time.dart';

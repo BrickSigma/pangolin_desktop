@@ -150,7 +150,7 @@ class _WelcomeScreenState extends State<_WelcomeScreen>
                   child: const Text("LET'S GO!"),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

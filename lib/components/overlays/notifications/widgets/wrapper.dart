@@ -21,8 +21,8 @@ class NotificationViewWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final CurvedAnimation curved = CurvedAnimation(
       parent: notification.controller,
-      curve: decelerateEasing,
-      reverseCurve: decelerateEasing.flipped,
+      curve: Easing.legacyDecelerate,
+      reverseCurve: Easing.legacyDecelerate.flipped,
     );
 
     return MouseRegion(

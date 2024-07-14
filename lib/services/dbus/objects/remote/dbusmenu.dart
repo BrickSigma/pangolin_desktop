@@ -147,7 +147,7 @@ class DBusMenuObject extends DBusRemoteObject {
       [
         DBusInt32(parentId),
         DBusInt32(recursionDepth),
-        DBusArray.string(propertyNames)
+        DBusArray.string(propertyNames),
       ],
       replySignature: DBusSignature('u(ia{sv}av)'),
       noAutoStart: noAutoStart,
@@ -211,7 +211,7 @@ class DBusMenuObject extends DBusRemoteObject {
         DBusInt32(id),
         DBusString(eventId),
         DBusVariant(data),
-        DBusUint32(timestamp)
+        DBusUint32(timestamp),
       ],
       replySignature: DBusSignature(''),
       noAutoStart: noAutoStart,

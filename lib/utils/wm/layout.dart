@@ -208,7 +208,7 @@ class _WindowLayoutBuilderState extends State<_WindowLayoutBuilder>
   LiveWindowEntry get window => widget.window;
   CurvedAnimation get animation => CurvedAnimation(
         parent: _controller,
-        curve: decelerateEasing,
+        curve: Easing.legacyDecelerate,
       );
 
   Rect _getWindowRect() {

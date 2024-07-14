@@ -1,5 +1,4 @@
 import 'package:dahlia_shared/dahlia_shared.dart';
-import 'package:flutter/material.dart';
 import 'package:zenit_ui/zenit_ui.dart';
 
 class Searchbar extends StatelessWidget {

@@ -61,7 +61,7 @@ class AppLauncherButton extends StatelessWidget {
                   application.getLocalizedName(context.locale),
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 17),
-                )
+                ),
               ],
             ),
           ),

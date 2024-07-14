@@ -31,7 +31,7 @@ void showKeyboard(BuildContext context) {
     ")\n0",
     "_\n-",
     "+\n=",
-    "delete"
+    "delete",
   ];
   const List<String> row2 = [
     "tab",
@@ -47,7 +47,7 @@ void showKeyboard(BuildContext context) {
     "p",
     "{\n[",
     "}\n]",
-    "|\n\\"
+    "|\n\\",
   ];
   const List<String> row3 = [
     "caps",
@@ -62,7 +62,7 @@ void showKeyboard(BuildContext context) {
     "l",
     ":\n;",
     "\"\n'",
-    "enter"
+    "enter",
   ];
   const List<String> row4 = [
     "shift",
@@ -76,7 +76,7 @@ void showKeyboard(BuildContext context) {
     "<\n,",
     ">\n.",
     "?\n/",
-    "shift"
+    "shift",
   ];
   const List<String> row5 = [
     "fn",
@@ -87,7 +87,7 @@ void showKeyboard(BuildContext context) {
     "control",
     "alt",
     "up",
-    "dn"
+    "dn",
   ];
   showGeneralDialog(
     barrierLabel: "Barrier",

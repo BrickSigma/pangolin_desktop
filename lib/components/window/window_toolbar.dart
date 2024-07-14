@@ -14,7 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pangolin/components/shell/effects.dart';
 import 'package:pangolin/utils/wm/wm.dart';
@@ -86,7 +85,7 @@ class _PangolinWindowToolbarState extends State<PangolinWindowToolbar> {
                       const SizedBox(
                         height: 16,
                       ),
-                      Text(properties.info.title)
+                      Text(properties.info.title),
                     ],
                   ),
                   actions: [
@@ -98,7 +97,7 @@ class _PangolinWindowToolbarState extends State<PangolinWindowToolbar> {
                         padding: EdgeInsets.all(8.0),
                         child: Text("Close"),
                       ),
-                    )
+                    ),
                   ],
                 ),
               );

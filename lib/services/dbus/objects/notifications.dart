@@ -72,7 +72,7 @@ class NotificationsBase extends DBusObject {
                 DBusSignature('s'),
                 DBusArgumentDirection.out,
                 name: 'return_spec_version',
-              )
+              ),
             ],
           ),
           DBusIntrospectMethod(
@@ -82,7 +82,7 @@ class NotificationsBase extends DBusObject {
                 DBusSignature('as'),
                 DBusArgumentDirection.out,
                 name: 'return_caps',
-              )
+              ),
             ],
           ),
           DBusIntrospectMethod(
@@ -92,7 +92,7 @@ class NotificationsBase extends DBusObject {
                 DBusSignature('u'),
                 DBusArgumentDirection.in_,
                 name: 'id',
-              )
+              ),
             ],
           ),
           DBusIntrospectMethod(
@@ -142,11 +142,11 @@ class NotificationsBase extends DBusObject {
                 DBusSignature('u'),
                 DBusArgumentDirection.out,
                 name: 'return_id',
-              )
+              ),
             ],
-          )
+          ),
         ],
-      )
+      ),
     ];
   }
 

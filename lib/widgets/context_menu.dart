@@ -50,11 +50,11 @@ class _ContextMenuState extends State<ContextMenu> {
         onOpen: widget.onOpen,
         onClose: widget.onClose,
         style: MenuStyle(
-          backgroundColor: MaterialStatePropertyAll<Color>(
-            Theme.of(context).colorScheme.background,
+          backgroundColor: WidgetStatePropertyAll<Color>(
+            Theme.of(context).colorScheme.surface,
           ),
-          shape: const MaterialStatePropertyAll(Constants.mediumShape),
-          side: MaterialStatePropertyAll(
+          shape: const WidgetStatePropertyAll(Constants.mediumShape),
+          side: WidgetStatePropertyAll(
             BorderSide(
               color: ZenitThemeData(Theme.of(context)).foregroundColor.op(0.1),
             ),
@@ -134,10 +134,10 @@ class SubmenuMenuItem extends BaseContextMenuItem {
       leadingIcon: buildLeading(context),
       trailingIcon: buildTrailing(context),
       style: ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll<Color>(
-          Theme.of(context).colorScheme.background,
+        backgroundColor: WidgetStatePropertyAll<Color>(
+          Theme.of(context).colorScheme.surface,
         ),
-        padding: const MaterialStatePropertyAll(
+        padding: const WidgetStatePropertyAll(
           EdgeInsets.symmetric(horizontal: 16),
         ),
       ),
@@ -174,10 +174,10 @@ class ContextMenuItem extends BaseContextMenuItem {
       onPressed: onTap,
       shortcut: shortcut,
       style: ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll<Color>(
-          Theme.of(context).colorScheme.background,
+        backgroundColor: WidgetStatePropertyAll<Color>(
+          Theme.of(context).colorScheme.surface,
         ),
-        padding: const MaterialStatePropertyAll(
+        padding: const WidgetStatePropertyAll(
           EdgeInsets.symmetric(horizontal: 16),
         ),
       ),

@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import 'package:dahlia_shared/dahlia_shared.dart';
-import 'package:flutter/material.dart';
 import 'package:pangolin/utils/api_models/bing_wallpaper_api_model.dart';
 import 'package:pangolin/utils/api_models/wallpaper_api_model.dart';
 import 'package:pangolin/utils/data/globals.dart';
@@ -206,7 +205,7 @@ class _WallpaperPickerState extends State<WallpaperPicker>
                         ),
                       );
                     },
-                  )
+                  ),
                 ],
               ),
             ),

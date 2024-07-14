@@ -107,13 +107,13 @@ Widget networkTile({
                       "connect",
                       title,
                       "password",
-                      passwordController.text
+                      passwordController.text,
                     ],
                   );
                   // print("Connecting to: " + title);
                   Navigator.of(ctx).pop();
                   final String networkConnection = Process.runSync('curl', [
-                    'https://packages.dahliaos.io/validation.get'
+                    'https://packages.dahliaos.io/validation.get',
                   ]).stdout.toString().replaceAll('\n', '');
                   if (networkConnection == "true") {
                     final snackBar = SnackBar(

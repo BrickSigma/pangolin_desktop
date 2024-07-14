@@ -164,12 +164,10 @@ class _TrayMenuItemState extends State<_TrayMenuItem> {
           shape: Constants.smallShape,
           clipBehavior: Clip.antiAlias,
           child: ContextMenu(
-            entries: widget.item.menu != null
-                ? widget.item.menu!.children
+            entries: widget.item.menu?.children
                     .where((e) => e.visible)
                     .map((e) => DBusMenuEntry(e))
-                    .toList()
-                : null,
+                    .toList(),
             onOpen: () {
               widget.item.menu!.object.callEvent(
                 widget.item.menu!.id,

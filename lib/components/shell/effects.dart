@@ -35,7 +35,7 @@ class EffectsLayerState extends State<EffectsLayer>
   );
   Animation<double> get _curvedAnim => CurvedAnimation(
         parent: _rectController,
-        curve: decelerateEasing,
+        curve: Easing.legacyDecelerate,
       );
   final RectTween _rectTween = RectTween();
   LayoutState? _dockingWindow;

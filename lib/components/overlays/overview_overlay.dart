@@ -74,7 +74,7 @@ class _OverviewOverlayState extends ShellOverlayState<OverviewOverlay>
                 height: 152,
                 child: DecoratedBox(
                   decoration:
-                      BoxDecoration(color: theme.colorScheme.background),
+                      BoxDecoration(color: theme.colorScheme.surface),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -106,7 +106,7 @@ class _OverviewOverlayState extends ShellOverlayState<OverviewOverlay>
                           icon: const Icon(Icons.add),
                           label: Text(strings.overviewOverlay.newDesktop),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

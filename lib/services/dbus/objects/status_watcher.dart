@@ -98,7 +98,7 @@ class StatusNotifierWatcherBase extends DBusObject {
                 DBusSignature('s'),
                 DBusArgumentDirection.in_,
                 name: 'service',
-              )
+              ),
             ],
           ),
           DBusIntrospectMethod(
@@ -108,9 +108,9 @@ class StatusNotifierWatcherBase extends DBusObject {
                 DBusSignature('s'),
                 DBusArgumentDirection.in_,
                 name: 'service',
-              )
+              ),
             ],
-          )
+          ),
         ],
         signals: [
           DBusIntrospectSignal(
@@ -119,7 +119,7 @@ class StatusNotifierWatcherBase extends DBusObject {
               DBusIntrospectArgument(
                 DBusSignature('s'),
                 DBusArgumentDirection.out,
-              )
+              ),
             ],
           ),
           DBusIntrospectSignal(
@@ -128,11 +128,11 @@ class StatusNotifierWatcherBase extends DBusObject {
               DBusIntrospectArgument(
                 DBusSignature('s'),
                 DBusArgumentDirection.out,
-              )
+              ),
             ],
           ),
           DBusIntrospectSignal('StatusNotifierHostRegistered'),
-          DBusIntrospectSignal('StatusNotifierHostUnregistered')
+          DBusIntrospectSignal('StatusNotifierHostUnregistered'),
         ],
         properties: [
           DBusIntrospectProperty(
@@ -149,9 +149,9 @@ class StatusNotifierWatcherBase extends DBusObject {
             'ProtocolVersion',
             DBusSignature('i'),
             access: DBusPropertyAccess.read,
-          )
+          ),
         ],
-      )
+      ),
     ];
   }
 

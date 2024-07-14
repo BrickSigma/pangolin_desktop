@@ -49,7 +49,7 @@ class SurfaceLayer extends StatelessWidget {
       margin: margin,
       decoration: ShapeDecoration(
         shape: shape,
-        color: theme.colorScheme.background,
+        color: theme.colorScheme.surface,
         shadows: dropShadow
             ? [
                 BoxShadow(

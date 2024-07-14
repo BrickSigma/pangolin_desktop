@@ -64,7 +64,7 @@ class _SearchTileState extends State<SearchTile>
         onTap: () async {
           service.recentSearchResults = [
             ...service.recentSearchResults,
-            application.id
+            application.id,
           ];
           await ApplicationService.current.startApp(application.id);
           ShellService.current.dismissEverything();

@@ -140,7 +140,7 @@ class _TaskbarItemState extends State<TaskbarItem>
                           ?.withOpacity(0.2)
                       : Theme.of(context)
                           .colorScheme
-                          .background
+                          .surface
                           .withOpacity(0.0))
                   : Colors.transparent,
               child: InkWell(
