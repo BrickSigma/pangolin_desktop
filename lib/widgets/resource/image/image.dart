@@ -1,4 +1,4 @@
-import 'dart:convert';
+// import 'dart:convert';
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
@@ -9,7 +9,7 @@ import 'package:jovial_svg/jovial_svg.dart';
 // ignore: implementation_imports
 import 'package:jovial_svg/src/dag.dart';
 // ignore: implementation_imports
-import 'package:jovial_svg/src/svg_parser.dart';
+// import 'package:jovial_svg/src/svg_parser.dart';
 import 'package:pangolin/widgets/resource/image/xpm.dart';
 import 'package:path/path.dart' as p;
 
@@ -209,7 +209,8 @@ class _SvgFileRendererState extends State<_SvgFileRenderer> {
     }
 
     final b = SIDagBuilder(warn: (_) {});
-    StringSvgParser(utf8.decode(src), b, warn: (_) {}).parse();
+    // TODO: Not sure how the bellow function works, and if it modifies the variable `b` in any way...
+    // StringSvgParser(utf8.decode(src), b, warn: (_) {}).parse();
     image = b.si;
     if (mounted) setState(() {});
   }

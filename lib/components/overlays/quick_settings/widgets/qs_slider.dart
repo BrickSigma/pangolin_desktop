@@ -48,10 +48,11 @@ class QsSlider extends StatelessWidget {
           child: ZenitSlider(
             onChanged: onChanged,
             value: value ?? 0,
-            divisions: steps,
-            label:
-                value != null ? '${(value! * 100).toStringAsFixed(0)}%' : null,
-            height: 6,
+            // TODO: divisions need to be implemented...
+            // divisions: steps,
+            // label:
+            //     value != null ? '${(value! * 100).toStringAsFixed(0)}%' : null,
+            // height: 6,
           ),
         ),
         const QuickActionButton(

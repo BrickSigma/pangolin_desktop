@@ -56,12 +56,16 @@ class _ContextMenuState extends State<ContextMenu> {
           shape: const WidgetStatePropertyAll(Constants.mediumShape),
           side: WidgetStatePropertyAll(
             BorderSide(
-              color: ZenitThemeData(Theme.of(context)).foregroundColor.op(0.1),
+              /// NOTE: Changed line:
+              ///color: ZenitThemeData(Theme.of(context)).foregroundColor.op(0.1),
+              color: Theme.of(context).colorScheme.onSurface.op(1),
             ),
           ),
         ),
         controller: _MenuControllerRegistry.instance.get(controllerId),
-        anchorTapClosesMenu: true,
+        // Deprecated...
+        // anchorTapClosesMenu: true,
+        consumeOutsideTap: true,
         menuChildren:
             widget.entries!.map((e) => e.buildWrapper(context)).toList(),
         child: widget.child,

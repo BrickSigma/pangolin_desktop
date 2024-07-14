@@ -108,7 +108,7 @@ class Xpm {
   int get hashCode => Object.hash(width, height, data);
 
   @override
-  bool operator ==(Object? other) {
+  bool operator ==(Object other) {
     if (other is Xpm) {
       return width == other.width &&
           height == other.height &&

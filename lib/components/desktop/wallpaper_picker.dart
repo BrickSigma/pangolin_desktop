@@ -260,7 +260,7 @@ class _WallpaperPickerState extends State<WallpaperPicker>
                       );
                       service.addRecentWallpaper(service.wallpaper);
 
-                      if (mounted) Navigator.pop(context);
+                      if (context.mounted) Navigator.pop(context);
                     },
                     label: const Text(
                       "Use Bing Wallpaper",

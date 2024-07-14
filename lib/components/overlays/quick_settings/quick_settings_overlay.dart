@@ -192,7 +192,7 @@ class _QsMainState extends State<QsMain>
         textStyle: TextStyle(
           fontSize: 13,
           fontWeight: FontWeight.w500,
-          color: Theme.of(context).foregroundColor,
+          color: Theme.of(context).colorScheme.onSurface,
         ),
       ),
       const Spacer(),

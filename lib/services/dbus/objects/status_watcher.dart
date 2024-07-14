@@ -163,7 +163,8 @@ class StatusNotifierWatcherBase extends DBusObject {
           return DBusMethodErrorResponse.invalidArgs();
         }
         return doRegisterStatusNotifierItem(
-          methodCall.sender,
+          // TODO: Could possibly be null, might have to add a null check...
+          methodCall.sender!,
           methodCall.values[0].asString(),
         );
       } else if (methodCall.name == 'RegisterStatusNotifierHost') {

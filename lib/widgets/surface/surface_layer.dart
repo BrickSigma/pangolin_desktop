@@ -67,7 +67,7 @@ class SurfaceLayer extends StatelessWidget {
           // Create outline around the surface
           side: outline
               ? BorderSide(
-                  color: theme.foregroundColor.withOpacity(0.1),
+                  color: theme.colorScheme.onSurface.withOpacity(0.1),
                 )
               : BorderSide.none,
         ),
