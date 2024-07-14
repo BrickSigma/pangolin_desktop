@@ -24,10 +24,10 @@ dependencies:
     sdk: flutter
   flutter_localizations: 
     sdk: flutter
+  flutter_svg: ^2.0.10+1
   gsettings: ^0.2.7
   http: ^1.1.0
   intl: ^0.19.0
-  jovial_svg: ^1.1.17
   logging: ^1.0.2
   path: ^1.8.2
   pausable_timer: ^2.0.0+1
@@ -65,7 +65,7 @@ dependencies:
 
 dev_dependencies: 
   build_runner: ^2.4.4
-  
+
   flutter_test:
     sdk: flutter
     

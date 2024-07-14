@@ -1,15 +1,12 @@
-// import 'dart:convert';
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dahlia_shared/dahlia_shared.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:jovial_svg/jovial_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 // ignore: implementation_imports
-import 'package:jovial_svg/src/dag.dart';
 // ignore: implementation_imports
-// import 'package:jovial_svg/src/svg_parser.dart';
 import 'package:pangolin/widgets/resource/image/xpm.dart';
 import 'package:path/path.dart' as p;
 
@@ -183,7 +180,7 @@ class _SvgFileRenderer extends StatefulWidget {
 }
 
 class _SvgFileRendererState extends State<_SvgFileRenderer> {
-  ScalableImage? image;
+  SvgPicture? image;
 
   @override
   void initState() {
@@ -200,18 +197,13 @@ class _SvgFileRendererState extends State<_SvgFileRenderer> {
   }
 
   Future<void> _loadResource() async {
-    List<int> src = await widget.file.readAsBytes();
-    final ByteData data = ByteData.sublistView(Uint8List.fromList(src));
-    final int header = data.getUint16(0);
+    image = SvgPicture.file(
+      widget.file,
+      width: widget.width ?? double.infinity,
+      height: widget.height ?? double.infinity,
+      fit: widget.fit ?? BoxFit.contain,
+    );
 
-    if (header == 0x1f8b || header == 0x8b1f) {
-      src = gzip.decode(src);
-    }
-
-    final b = SIDagBuilder(warn: (_) {});
-    // TODO: Not sure how the bellow function works, and if it modifies the variable `b` in any way...
-    // StringSvgParser(utf8.decode(src), b, warn: (_) {}).parse();
-    image = b.si;
     if (mounted) setState(() {});
   }
 
@@ -220,12 +212,7 @@ class _SvgFileRendererState extends State<_SvgFileRenderer> {
     return SizedBox(
       width: widget.width ?? double.infinity,
       height: widget.height ?? double.infinity,
-      child: image != null
-          ? ScalableImageWidget(
-              si: image!,
-              fit: widget.fit ?? BoxFit.contain,
-            )
-          : null,
+      child: image,
     );
   }
 }
